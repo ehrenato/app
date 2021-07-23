@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const css = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#b9d554',
+        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -13,8 +13,19 @@ const css = StyleSheet.create({
     },
 
     darkbg: {
-        backgroundColor: "#b9d554"
+        backgroundColor: "#fff"
     },
+
+    containerContato: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    darkbgContato: {
+        backgroundColor: "#fff"
+    },  
+
     login__logomarca: {
         marginBottom: 10,
         width: 40,
@@ -22,9 +33,10 @@ const css = StyleSheet.create({
 
     },
     login__msg: (text = 'none') => ({
+        fontWeight: "bold",
         fontSize: 22,
         color: "red",
-        marginBottom: 10,
+        marginBottom: 15,
         display: text
     }),
     login__form: {
@@ -37,13 +49,15 @@ const css = StyleSheet.create({
         padding: 7,
         marginBottom: 15,
         borderRadius: 20,
-
-       
         height: 40,
         width: 300,
         alignItems: 'center',
-       
-     
+        borderColor: '#000',
+        color: '#000',
+        borderBottomColor: '#000',
+        borderStyle: "dashed",
+        lineHeight: 2
+
     },
     login__button: {
         padding: 12,
@@ -57,20 +71,24 @@ const css = StyleSheet.create({
         fontSize: 22,
         color: "#fff"
     },
-    login__cadastro:{
+    login__cadastro: {
         fontWeight: "bold",
         fontSize: 14,
-        color: "#fff",
+        color: "#006600",
         padding: 10,
         textAlign: "center"
     },
 
-    login__img:{
-      width: '100%',
-      
-        
-       
+    login__img: {
+        width: '100%',
+
+
+
         marginBottom: 30
+    },
+       
+    msg__label: {
+        color: "#000"
     },
 
     //Estilo da consulta externa
@@ -102,7 +120,7 @@ const css = StyleSheet.create({
         fontSize: 22,
         color: "#fff"
     },
-    externo__cadastro:{
+    externo__cadastro: {
         fontWeight: "bold",
         fontSize: 14,
         color: "#fff",
@@ -128,24 +146,24 @@ const css = StyleSheet.create({
         width: 100
     },
 
-    button__register:{
+    button__register: {
         height: 100,
         width: 100
     },
 
-    backgroundImage:{
+    backgroundImage: {
         flex: 1,
         resizeMode: 'center', // or 'stretch'
-       
-        
-      
-      },
+
+
+
+    },
 
     area__tab: {
-        backgroundColor: '#90b02d',
+        backgroundColor: '#fff',
         fontSize: 24,
         fontWeight: "bold",
-        color: '#006DB8'
+        color: '#006600'
     },
 
     area__menu: {
@@ -153,23 +171,44 @@ const css = StyleSheet.create({
         paddingTop: 40,
         paddingBottom: 10,
         width: '100%',
-        backgroundColor: '#b9d554',
+        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center'
     },
+
+    area__menuContato: {
+        flexDirection: 'row',
+        paddingTop: 40,
+        paddingBottom: 10,
+        width: '100%',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
     button__home2: {
         textAlign: 'left',
-        color: '#fff'
+        color: '#006600'
+       
     },
     area__title: {
         width: '80%',
         fontWeight: 'bold',
         fontSize: 30,
-        color: '#007f61',
+        color: '#006600',
         textAlign: 'center'
     },
-    button__logout: {
+
+    area__titleVoltar: {
+        width: '80%',
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: '#006600',
         textAlign: 'right'
+    },
+
+    button__logout: {
+        textAlign: 'left'
     },
 
 
@@ -178,13 +217,13 @@ const css = StyleSheet.create({
     },
 
     profile__input: {
-        backgroundColor: 'white',
+        //backgroundColor: 'white',
         height: 40,
         width: 300,
         alignItems: 'center',
         borderRadius: 5,
         padding: 4
-       
+
     },
 
     profile__button: {
@@ -202,9 +241,33 @@ const css = StyleSheet.create({
         color: "#fff"
     },
 
-    consult__label:{
+    list__button: {
+        padding: 12,
+        backgroundColor: "#007f61",
+        alignSelf: "center",
+        borderRadius: 8,
+        color: "#fff",
+        width: 300,
+        paddingBottom: 10,
+        marginBottom: 10
+    },
+
+    list__buttonText: {
+        fontWeight: "bold",
+        fontSize: 22,
+        color: "#fff"
+    },
+
+    consult__label: {
         fontSize: 14,
         color: "#fff",
+        textAlign: "center",
+        padding: 4
+    },
+
+    contato__label: {
+        fontSize: 14,
+        color: "#000",
         textAlign: "center",
         padding: 4
     },
@@ -212,14 +275,15 @@ const css = StyleSheet.create({
     consultText: {
         padding: 6
     },
-    
+
     consult__input: {
         backgroundColor: 'white',
         height: 40,
         width: 300,
         alignItems: 'center',
         borderRadius: 5,
-        padding: 4
+        padding: 10,
+       
     },
 
     consult__button: {
@@ -228,7 +292,7 @@ const css = StyleSheet.create({
         alignSelf: "center",
         borderRadius: 8,
         color: "#fff",
-        
+
 
     },
 
@@ -238,11 +302,11 @@ const css = StyleSheet.create({
         color: "#fff"
     },
 
-    maskedInput:{
+    maskedInput: {
         flexGrow: 1,
         height: 40,
         fontSize: 18,
-        
+
     },
 
     errorMessage: {
@@ -250,21 +314,19 @@ const css = StyleSheet.create({
         marginLeft: 15,
         color: "#f00",
         fontSize: 12
-      },
+    },
 
-
-
-    about__texto:{
-        color: "#007f61",
+    about__texto: {
+        color: "#006600",
         paddingTop: 10,
-     
+
         textAlign: 'justify',
         paddingLeft: 10,
         paddingRight: 10,
-        
+
     },
 
-    about__titulo:{
+    about__titulo: {
         color: "#00634c",
         paddingTop: 10,
         textAlign: "justify",

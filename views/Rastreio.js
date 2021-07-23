@@ -4,52 +4,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { css } from './../assets/css/Css';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MenuAreaRestrita from "./../assets/components/MenuAreaRestrita";
-import config from "./../config/config";
 import { KeyboardAvoidingView } from 'react-native';
-/*import { TextInputMask } from 'react-native-masked-text';*/
-
-
-
+import { root } from '../src/routes/config';
 export default function Rastreio({ navigation }) {
 
-    const [documento, setDocumento] = useState(null)
-    const [processos, setProcessos] = useState(null)
-    const [nome, setNome] = useState(null)
-    const [cpf, setCpf] = useState(null)
-    const [rg, setRg] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [motivacao, setMotivacao] = useState(null)
-    const [isSelected, setSelected] = useState(null)
-    const [errorDocumento, setErrorDocumento] = useState(null)
-    const [errorProcessos, setErrorProcessos] = useState(null)
-    const [errorNome, setErrorNome] = useState(null)
-    const [errorCpf, setErrorCpf] = useState(null)
-    const [errorRg, setErrorRg] = useState(null)
-    const [errorEmail, setErrorEmail] = useState(null)
-    const [errorMotivacao, setErrorMotivacao] = useState(null)
-
-    let cpfField = null
-
-    const validar = () => {
-        let error = false
-        setErrorEmail(null)
-        setErrorCpf(null)
-
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        if (!re.test(String(email).toLowerCase())) {
-            setErrorEmail("Preencha seu e-mail corretamente")
-            error = true
-        }
-        if (!cpfField.isValid()) {
-            setErrorCpf("Preencha seu CPF corretamente")
-            error = true
-        }
-
-        return !error
-    }
-
     async function sendForm() {
-        let response = await fetch('http://192.168.1.99:3000/rastreio?name=' + nome + '&password=' + password, {
+        let response = await fetch(root.urlRoot + 'rastreio?name=' + nome + '&password=' + password, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -63,7 +23,7 @@ export default function Rastreio({ navigation }) {
                 rg: rg,
                 email: email,
                 motivation: motivacao
-                
+
             })
         });
         let json = await response.json();

@@ -1,9 +1,10 @@
 import Home from './Home';
 import Login from './Login';
-import Rastreio from './Rastreio';
+import Externo from './Externo';
 import Profile from './arearestrita/Profile';
 import Consult from './arearestrita/Consult';
 import About from './arearestrita/About';
-//teste
+import List from './arearestrita/List';
+import Mensagens from './arearestrita/Mensagens';
 
-export {Home, Login, Rastreio, Profile, Consult, About};
+export {Home, Login, Externo, Profile, Consult, About, List, Mensagens};

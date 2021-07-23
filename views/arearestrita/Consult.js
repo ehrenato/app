@@ -7,14 +7,12 @@ import MenuAreaRestrita from "../../assets/components/MenuAreaRestrita";
 
 
 
-
 export default function Consult({ navigation }) {
     return (
         <View style={[css.container, css.containerTop]}>
         <MenuAreaRestrita title='Consulta' navigation={navigation} />
 
         <KeyboardAvoidingView
-                behavior={Platform.OS == "ios" ? "padding" : "height"}
                 style={[css.container, css.darkbg]}>
             
             <ScrollView>

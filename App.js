@@ -1,17 +1,14 @@
 import React, {useState,useEffect} from 'react';
-import { Text, View, Button, Alert } from 'react-native';
-import {css} from './assets/css/Css';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './views/Home';
 import Login from './views/Login';
-import Rastreio from './views/Rastreio';
+import Externo from './views/Externo';
 import AreaRestrita from "./views/arearestrita/AreaRestrita";
+import Mensagens from "./views/arearestrita/Mensagens";
 
 export default function App() {
 
   const Stack = createStackNavigator();
-  
 
   return (
     <NavigationContainer>
@@ -21,15 +18,15 @@ export default function App() {
                 component={Login}
                 options={{
                 headerShown:false,
-                title:"IDEMA Tecnologia",
+                title:"APP-IDEMA",
                 headerStyle:{backgroundColor:"#0080C6"},
                 headerTintColor:'#fff',
                 headerTitleStyle:{fontWeight:'bold', alignSelf:'center'}
             }}
         />
-       <Stack.Screen name="Rastreio" options={{headerShown:false}} component={Rastreio} />
+       <Stack.Screen name="Externo" options={{headerShown:false}} component={Externo} />
        <Stack.Screen name="AreaRestrita" options={{headerShown:false}} component={AreaRestrita} />
-        {/*<Stack.Screen name="AreaRestrita" component={AreaRestrita} />*/}
+       <Stack.Screen name="Mensagens" options={{headerShown:false}} component={Mensagens} />
       </Stack.Navigator>
     </NavigationContainer>
 );

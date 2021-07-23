@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
-    "version": "1.0.0",
+    "name": "idema",
+    "slug": "idema",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/img/icon.png",
     "splash": {
@@ -21,9 +21,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/img/icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.alisonbjjk.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
