@@ -3,7 +3,7 @@ import { KeyboardAvoidingView, TextInput, TouchableOpacity, Image, Text, View } 
 import { css } from '../assets/css/Css';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as LocalAuthentication from 'expo-local-authentication';
-
+//teste
 
 export default function Login({ navigation }) {
     const [display, setDisplay] = useState('none');
